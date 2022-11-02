@@ -1,0 +1,263 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+body {
+  @include centralize;
+  background-color: #202020;
+
+  main {
+    height: 675px;
+    width: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    
+
+    header {
+      padding-bottom: 20px;
+
+      display: flex;
+      justify-content: space-between;
+
+      position: fixed;
+      z-index: 99;
+      background-color: white;
+
+      h1, p {
+        color: #6a2eb8;
+      }
+
+      h1 {
+        padding: 1em 0 0 1em;
+      }
+
+      p {
+        padding: 0 0 0 2em;
+      }
+
+
+      a > i {
+        color: black;
+        font-size: 2em;
+        padding: 1em;
+        cursor: pointer;
+
+        &:hover {
+            color: #6a2eb8;
+        }
+      }
+    }
+
+    .container-form {
+      margin-top: 120px;
+      @include centralize;
+
+
+      input, select, textarea{
+        background-color: #f0f0f0;
+        border: none;
+        outline: none;
+        box-shadow: rgba(230, 230, 230, 0.25) 0px 30px 60px -12px inset, rgba(90, 90, 90, 0.199) 0px 18px 36px -18px inset;
+
+      }
+
+      .ficha {
+        @include centralize;
+        gap: 5px;
+        padding-bottom: 20px;
+
+        label {
+          align-self: flex-start;
+        }
+
+        input {
+          width: 320px;
+          height: 30px;
+          padding-left: 1em;
+          border-radius: 3px;
+        }
+      }
+
+      .nome-canal {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 5px;
+        padding-bottom: 20px;
+
+        .nome {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          width: 50%;
+          padding-left: 2em;
+
+          input {
+            height: 25px;
+            padding-left: 1em;
+            border-radius:  3px 0 0 3px;
+          }
+        }
+
+        .canal {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          width: 50%;
+          padding-right: 2em;
+
+          select {
+            height: 25px;
+            border-radius: 0 3px 3px 0;
+          }
+        }
+      }
+
+      .dominio {
+        @include centralize;
+        gap: 5px;
+        padding-bottom: 20px;
+
+        label {
+          align-self: flex-start;
+        }
+
+        input {
+          width: 320px;
+          height: 30px;
+          padding-left: 1em;
+          border-radius: 3px
+        }
+      }
+
+      .dif {
+        @include centralize;
+        gap: 5px;
+        padding-bottom: 20px;
+
+        label {
+          align-self: flex-start;
+        }
+
+        input {
+          width: 320px;
+          height: 30px;
+          padding-left: 1em;
+          border-radius: 3px
+        }
+      }
+
+      .desc {
+        @include centralize;
+        gap: 5px;
+        padding-bottom: 20px;
+
+        label {
+          align-self: flex-start;
+        }
+
+        textarea{
+          width: 320px;
+          height: 150px;
+          padding: 1em;
+          border-radius: 3px;
+          font-size: 16px;
+          line-height: 18px;
+        } 
+      }
+
+      .button {
+        [type="submit"] {
+            width: 320px;
+            height: 40px;
+            border-radius: 3px;
+            outline: none;
+            border: none;
+            color: white;
+            background-color: #6a2eb8;
+            font-size: 1em;
+        }
+      }
+    }
+
+    .cardcli {
+      display: flex;
+      flex-direction: column;
+      justify-self: center;
+      align-self: center;
+      width: 90%;
+      background-color: #eeeded;
+      padding: 2em 1em 1em 1em;
+      margin: 5px;
+      border-radius:6px;
+      position: relative;
+
+      .idcli{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #6a2eb8;
+        border-radius: 6px 0 6px 0;
+        color: #FFF;
+        padding: 2px;
+        width:100px;
+        font-size: 14px;
+        text-align: center;
+      }
+
+    }
+
+    .bin {
+      position: absolute;
+      color: #000;
+      top: 5px;
+      right: 5px;
+      font-size: 22px;
+    }
+
+    .desc2{
+      background-color: rgb(218, 216, 216);
+      padding: 10px 10px 10px;
+      border-radius: 3px;
+      height: 125px;
+      overflow-y: scroll;
+      overflow-wrap: break-word;
+      border: 1px solid rgba(0, 0, 0, 0.13);
+
+      &::-webkit-scrollbar{
+        width: 5px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: rgb(255, 255, 255); 
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #6a2eb8;
+        border-radius: 10px;
+      }
+    }
+
+
+    .bxs-copy{
+      background-color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      position: absolute;
+      right: 22px;
+      bottom: 17px;
+      padding: 5px;
+      border-radius: 10px 0 0 0;
+
+
+      &:hover {
+        color: #6a2eb8;
+      }
+    }
+
+
+
+  }
+}

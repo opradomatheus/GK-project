@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+[type=submit], button {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #202020;
+}
+body main {
+  height: 675px;
+  width: 400px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+body main header {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 99;
+  background-color: white;
+}
+body main header h1, body main header p {
+  color: #6a2eb8;
+}
+body main header h1 {
+  padding: 1em 0 0 1em;
+}
+body main header p {
+  padding: 0 0 0 2em;
+}
+body main header a > i {
+  color: black;
+  font-size: 2em;
+  padding: 1em;
+  cursor: pointer;
+}
+body main header a > i:hover {
+  color: #6a2eb8;
+}
+body main .container-form {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .container-form input, body main .container-form select, body main .container-form textarea {
+  background-color: #f0f0f0;
+  border: none;
+  outline: none;
+  box-shadow: rgba(230, 230, 230, 0.25) 0px 30px 60px -12px inset, rgba(90, 90, 90, 0.199) 0px 18px 36px -18px inset;
+}
+body main .container-form .ficha {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 20px;
+}
+body main .container-form .ficha label {
+  align-self: flex-start;
+}
+body main .container-form .ficha input {
+  width: 320px;
+  height: 30px;
+  padding-left: 1em;
+  border-radius: 3px;
+}
+body main .container-form .nome-canal {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 5px;
+  padding-bottom: 20px;
+}
+body main .container-form .nome-canal .nome {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 50%;
+  padding-left: 2em;
+}
+body main .container-form .nome-canal .nome input {
+  height: 25px;
+  padding-left: 1em;
+  border-radius: 3px 0 0 3px;
+}
+body main .container-form .nome-canal .canal {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 50%;
+  padding-right: 2em;
+}
+body main .container-form .nome-canal .canal select {
+  height: 25px;
+  border-radius: 0 3px 3px 0;
+}
+body main .container-form .dominio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 20px;
+}
+body main .container-form .dominio label {
+  align-self: flex-start;
+}
+body main .container-form .dominio input {
+  width: 320px;
+  height: 30px;
+  padding-left: 1em;
+  border-radius: 3px;
+}
+body main .container-form .dif {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 20px;
+}
+body main .container-form .dif label {
+  align-self: flex-start;
+}
+body main .container-form .dif input {
+  width: 320px;
+  height: 30px;
+  padding-left: 1em;
+  border-radius: 3px;
+}
+body main .container-form .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 20px;
+}
+body main .container-form .desc label {
+  align-self: flex-start;
+}
+body main .container-form .desc textarea {
+  width: 320px;
+  height: 150px;
+  padding: 1em;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 18px;
+}
+body main .container-form .button [type=submit] {
+  width: 320px;
+  height: 40px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: #6a2eb8;
+  font-size: 1em;
+}
+body main .cardcli {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+  width: 90%;
+  background-color: #eeeded;
+  padding: 2em 1em 1em 1em;
+  margin: 5px;
+  border-radius: 6px;
+  position: relative;
+}
+body main .cardcli .idcli {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #6a2eb8;
+  border-radius: 6px 0 6px 0;
+  color: #FFF;
+  padding: 2px;
+  width: 100px;
+  font-size: 14px;
+  text-align: center;
+}
+body main .bin {
+  position: absolute;
+  color: #000;
+  top: 5px;
+  right: 5px;
+  font-size: 22px;
+}
+body main .desc2 {
+  background-color: rgb(218, 216, 216);
+  padding: 10px 10px 10px;
+  border-radius: 3px;
+  height: 125px;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+}
+body main .desc2::-webkit-scrollbar {
+  width: 5px;
+}
+body main .desc2::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+body main .desc2::-webkit-scrollbar-thumb {
+  background-color: #6a2eb8;
+  border-radius: 10px;
+}
+body main .bxs-copy {
+  background-color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 22px;
+  bottom: 17px;
+  padding: 5px;
+  border-radius: 10px 0 0 0;
+}
+body main .bxs-copy:hover {
+  color: #6a2eb8;
+}/*# sourceMappingURL=main.css.map */
